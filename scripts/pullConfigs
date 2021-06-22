@@ -1,0 +1,49 @@
+#QTILE
+mkdir -p /home/david/dotfiles/qtile
+cp /home/david/.config/qtile/config.py /home/david/dotfiles/qtile/config.py
+
+#BSPWM(not using anymore)
+#mkdir -p /home/david/dotfiles/bspwm
+#cp /home/david/.config/bspwm/bspwmrc /home/david/dotfiles/bspwm/bspwmrc
+
+#SXHKD(not using anymore)
+#mkdir -p /home/david/dotfiles/sxhkd
+#cp /home/david/.config/sxhkd/sxhkdrc /home/david/dotfiles/sxhkd/sxhkdrc
+
+#NEOFETCH
+mkdir -p /home/david/dotfiles/neofetch 
+cp /home/david/.config/neofetch/config.conf /home/david/dotfiles/neofetch/config.conf
+
+#POLYBAR(not using anymore)
+#mkdir -p /home/david/dotfiles/polybar
+#cp /home/david/.config/polybar/config /home/david/dotfiles/polybar/config
+
+#PICOM
+cp /home/david/.config/picom.conf /home/david/dotfiles/picom.conf
+
+#ALACRITTY
+mkdir -p /home/david/dotfiles/alacritty
+cp /home/david/.config/alacritty/alacritty.yml /home/david/dotfiles/alacritty/alacritty.yml
+
+#WALLPAPERS
+mkdir -p /home/david/dotfiles/wallpapers
+cp -R /home/david/pictures/wallpapers/. /home/david/dotfiles/wallpapers/
+
+#VIMRC
+cp /home/david/.vimrc /home/david/dotfiles/.vimrc
+
+#NEOVIM
+mkdir -p /home/david/dotfiles/nvim
+cp /home/david/.config/nvim/init.vim /home/david/dotfiles/nvim/init.vim
+cp /home/david/.config/nvim/coc-settings.json /home/david/dotfiles/nvim/coc-settings.json
+
+#BASHRC
+cp /home/david/.bashrc /home/david/dotfiles/.bashrc
+
+#ZSHRC
+cp /home/david/.zshrc /home/david/dotfiles/.zshrc
+
+#SCRIPTS
+mkdir -p /home/david/dotfiles/scripts
+cp -R /home/david/scripts/. /home/david/dotfiles/scripts
+

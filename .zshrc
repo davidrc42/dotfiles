@@ -1,6 +1,13 @@
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
 
 HISTFILE=~/.histfile
 HISTSIZE=10000
@@ -37,6 +44,11 @@ mkdcd()
       cd -P -- "$1"
 }
 
+#range: 1-4437
+b(){
+    echo "$1" > /sys/class/backlight/intel_backlight/brightness
+}
+
 #VIM
 bindkey -v
 
@@ -69,4 +81,8 @@ bindkey -v
 #source ~/gitrepos/zsh-autocomplete/zsh-autocomplete.plugin.zsh
 source ~/gitrepos/zsh-autosuggestions/zsh-autosuggestions.zsh
 #MUST BE THE LAST ONE
-source ./aurpackages/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source ./gitrepos/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source ~/powerlevel10k/powerlevel10k.zsh-theme
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh

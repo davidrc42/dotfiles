@@ -10,7 +10,7 @@ border_width = 2
 color1 = "#015477"
 #color1 = "#070D18"
 color2 = "#282A36"
-color3 = "#EC543B"
+color3 = "#982123"
 color4 = "#1F242C" 
 color5 = "#2E3440"
 
@@ -19,6 +19,7 @@ terminal = "alacritty"
 browser = "brave"
 vscode = "code"
 gimp = "gimp"
+fileManager = "thunar"
 
 
 keys = [
@@ -61,21 +62,20 @@ keys = [
         desc="Toggle between split and unsplit sides of stack",
     ),
     Key([mod], "Return", lazy.spawn(terminal), desc="Launch terminal"),
+    Key([mod], "t", lazy.spawn(fileManager), desc="Launch file manager"),
     Key([mod], "w", lazy.spawn(browser), desc="Launch browser"),
     Key([mod], "c", lazy.spawn(vscode), desc="Launch visual studio code"),
     Key([mod], "d", lazy.spawn("rofi -show run"), desc="Launch rofi"),
     Key([mod], "g", lazy.spawn("gimp"), desc="Launch gimp"),
-    # Key([mod], "n", lazy.spawn(terminal+" -e amixer -D pulse sset Master 10%-"), desc="increase volume"),
-    # Key([mod], "m", lazy.spawn(terminal+" -e amixer -D pulse sset Master 10%+"), desc="decrease volume"),
     Key(
         [mod],
-        "XF86AudioLowerVolume",
+        "n",
         lazy.spawn("amixer -D pulse sset Master 5%-"),
         desc="increase volume",
     ),
     Key(
         [mod],
-        "XF86AudioRaiseVolume",
+        "m",
         lazy.spawn("amixer -D pulse sset Master 5%+"),
         desc="decrease volume",
     ),
@@ -151,25 +151,37 @@ screens = [
     Screen(
         top=bar.Bar(
             [
-                # widget.CurrentLayout(),
-                widget.GroupBox(
-                    # borderwidth=2,
-                    # highlight_method='text',
-                    # highlight_color=color2,
-                ),
+                widget.GroupBox(),
+
                 widget.Prompt(),
                 widget.WindowName(background=color4, padding=10),
-                #    widget.TextBox(
-                #         text = '',
-                #         foreground = color1,
-                #         background=color2,
-                #         padding = 0,
-                #         fontsize = 60
-                #    ),
-                widget.Clock(format="%Y-%m-%d %I:%M %p", background=color4),
+                widget.TextBox(
+                         text = '',
+                         foreground = color3,
+                         background=color4,
+                         padding = 0,
+                         fontsize = 59
+                    ),
+                widget.Battery(
+                    charge_char='',
+                    discharge_char='',
+                    empty_char='',
+                    format='{percent:2.0%}',
+                    background=color3
+                ),
+                widget.TextBox(
+                         text = '',
+                         foreground = color1,
+                         background=color3,
+                         padding = 0,
+                         fontsize = 59
+                    ),
+                widget.Clock(format="%Y-%m-%d %I:%M %p", background=color1),
             ],
             24,
         ),
+    ),
+    Screen(
     ),
 ]
 

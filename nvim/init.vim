@@ -1,6 +1,4 @@
-let g:javascript_plugin_jsdoc = 1
-set number
-set relativenumber
+set number set relativenumber
 set noerrorbells
 set tabstop=4
 set hidden
@@ -19,6 +17,15 @@ set signcolumn=yes
 syntax on 
 set nocompatible
 filetype off
+set go+=a
+set clipboard=unnamedplus
+"auto install plug
+let data_dir = has('nvim') ? stdpath('data') . '/site' : '~/.vim'
+if empty(glob(data_dir . '/autoload/plug.vim'))
+  silent execute '!curl -fLo '.data_dir.'/autoload/plug.vim --create-dirs  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
+
 call plug#begin('j/.config/nvim/plugged')
     Plug 'dracula/vim', { 'as': 'dracula' }
     Plug 'morhetz/gruvbox'
@@ -40,11 +47,17 @@ call plug#begin('j/.config/nvim/plugged')
     Plug 'yuezk/vim-js'
     Plug 'honza/vim-snippets'
     Plug 'alvan/vim-closetag'
+    Plug 'turbio/bracey.vim', {'do': 'npm install --prefix server'}
+    Plug 'pangloss/vim-javascript'
 "    Plug 'ryanoasis/vim-devicons'
 "    Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 call plug#end()
 
-colorscheme nord
+colorscheme onedark
+"transparency
+hi Normal guibg=NONE ctermbg=NONE
+
+let g:javascript_plugin_jsdoc = 1
 
 "BAR
 let g:lightline = {
@@ -67,7 +80,9 @@ set pastetoggle=<F3>
 map <silent> <C-n> :NERDTreeFocus<CR>
 
 "PRETTIER
-command! -nargs=0 Prettier :CocCommand prettier.formatFile
+let g:prettier#autoformat = 1
+let g:prettier#autoformat_require_pragma = 0
+
 
 "CLOSE TAG
 " filenames like *.xml, *.html, *.xhtml, ...
@@ -133,6 +148,7 @@ let g:coc_global_extensions = [
   \ 'coc-pairs',
   \ 'coc-pairs',
   \ 'coc-eslint',
+  \ 'coc-prettier',
   \ ]
 
 " Set internal encoding of vim, not needed on neovim, since coc.nvim using some

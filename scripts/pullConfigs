@@ -29,8 +29,6 @@ cp /home/david/.config/alacritty/alacritty.yml /home/david/dotfiles/alacritty/al
 mkdir -p /home/david/dotfiles/wallpapers
 cp -R /home/david/pictures/wallpapers/. /home/david/dotfiles/wallpapers/
 
-#VIMRC
-cp /home/david/.vimrc /home/david/dotfiles/.vimrc
 
 #NEOVIM
 mkdir -p /home/david/dotfiles/nvim

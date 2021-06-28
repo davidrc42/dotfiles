@@ -31,9 +31,7 @@ cp -R /home/david/pictures/wallpapers/. /home/david/dotfiles/wallpapers/
 
 
 #NEOVIM
-mkdir -p /home/david/dotfiles/nvim
-cp /home/david/.config/nvim/init.vim /home/david/dotfiles/nvim/init.vim
-cp /home/david/.config/nvim/coc-settings.json /home/david/dotfiles/nvim/coc-settings.json
+cp -r /home/david/.config/nvim/ /home/david/dotfiles/
 
 #BASHRC
 cp /home/david/.bashrc /home/david/dotfiles/.bashrc

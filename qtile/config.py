@@ -13,8 +13,9 @@ color2 = "#282A36"
 color3 = "#982123"
 color4 = "#1F242C" 
 color5 = "#2E3440"
+color6 = "#1C632E"
 
-mod = "mod4"
+mod = "mod1"
 terminal = "alacritty"
 browser = "brave"
 vscode = "code"
@@ -125,7 +126,7 @@ for i in groups:
 layouts = [
     layout.Columns(
         border_focus=color1,
-        border_normal=color2,
+        border_normal=color3,
         margin=gaps,
         border_width=border_width,
         border_on_single=True,
@@ -144,7 +145,7 @@ layouts = [
     # layout.Zoomy(),
 ]
 
-widget_defaults = dict(font="monospace bold", fontsize=14, padding=3, background=color4)
+widget_defaults = dict(font="monospace bold", fontsize=14, padding=2, background=color4)
 extension_defaults = widget_defaults.copy()
 
 screens = [
@@ -156,12 +157,34 @@ screens = [
                 widget.Prompt(),
                 widget.WindowName(background=color4, padding=10),
                 widget.TextBox(
-                         text = '',
-                         foreground = color3,
+                         text = '⮂',
+                         foreground = color6,
                          background=color4,
-                         padding = 0,
-                         fontsize = 59
-                    ),
+                         fontsize = 33
+                ),
+                widget.TextBox(
+                         text = '🔉',
+                         background=color6,
+                         fontsize = 16,
+                         font='monospace'
+                ),
+                widget.Volume(
+                    background=color6,
+
+                ),
+                widget.TextBox(
+                         text = '⮂',
+                         foreground = color3,
+                         background=color6,
+                         fontsize = 33
+                ),
+                widget.TextBox(
+                    "🔌",
+                    fontsize=12,
+                    padding=0,
+                    font='monospace',
+                    background=color3
+                ),
                 widget.Battery(
                     charge_char='',
                     discharge_char='',
@@ -170,13 +193,19 @@ screens = [
                     background=color3
                 ),
                 widget.TextBox(
-                         text = '',
+                         text = '⮂',
                          foreground = color1,
                          background=color3,
-                         padding = 0,
-                         fontsize = 59
+                         fontsize = 33
                     ),
-                widget.Clock(format="%Y-%m-%d %I:%M %p", background=color1),
+                widget.TextBox(
+                    "📆",
+                    font='monospace',
+                    fontsize=12,
+                    padding=0,
+                    background=color1
+                ),
+                widget.Clock(format="%Y-%m-%d %H:%M", background=color1),
             ],
             24,
         ),

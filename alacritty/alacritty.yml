@@ -1,39 +1,38 @@
 colors:
-    primary:
-        background: "#000000"
-        foreground: "#abb2bf"
-    normal:
-        black: "#282c34"
-        red: "#e06c75"
-        green: "#98c379"
-        yellow: "#d19a66"
-        blue: "#61afef"
-        magenta: "#c678dd"
-        cyan: "#56b6c2"
-        white: "#abb2bf"
-    bright:
-        black: "#5c6370"
-        red: "#e06c75"
-        green: "#98c379"
-        yellow: "#d19a66"
-        blue: "#61afef"
-        magenta: "#c678dd"
-        cyan: "#56b6c2"
-        white: "#ffffff"
+  primary:
+    background: "#000000"
+    foreground: "#abb2bf"
+  normal:
+    black: "#282c34"
+    red: "#e06c75"
+    green: "#98c379"
+    yellow: "#d19a66"
+    blue: "#61afef"
+    magenta: "#c678dd"
+    cyan: "#56b6c2"
+    white: "#abb2bf"
+  bright:
+    black: "#5c6370"
+    red: "#e06c75"
+    green: "#98c379"
+    yellow: "#d19a66"
+    blue: "#61afef"
+    magenta: "#c678dd"
+    cyan: "#56b6c2"
+    white: "#ffffff"
 window:
-    padding:
-        x: 0
-        y: 0
+  padding:
+    x: 0
+    y: 0
 font:
-    normal:
-        family: monospace
-        style: bold
-    size: 10
+  normal:
+    family: "Monospace"
+  size: 10
 background_opacity: 0.9
 key_bindings:
-    - key: Equals
-      mods: Control
-      action: IncreaseFontSize
-    - key: Plus
-      mods: Control
-      action: DecreaseFontSize
+  - key: Equals
+    mods: Control
+    action: IncreaseFontSize
+  - key: Plus
+    mods: Control
+    action: DecreaseFontSize

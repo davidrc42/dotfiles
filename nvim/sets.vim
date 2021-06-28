@@ -1,0 +1,23 @@
+set number
+set relativenumber
+set noerrorbells
+set tabstop=4
+set hidden
+set softtabstop=4
+set shiftwidth=4
+set expandtab
+set smartindent
+set nowrap
+set noswapfile
+set incsearch
+set scrolloff=10
+set showtabline=0
+set laststatus=2
+set noshowmode
+set signcolumn=yes
+syntax on 
+set nocompatible
+filetype off
+set go+=a
+set clipboard=unnamedplus
+

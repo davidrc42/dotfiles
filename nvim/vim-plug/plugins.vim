@@ -23,4 +23,8 @@ call  plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'pangloss/vim-javascript'
     Plug 'sheerun/vim-polyglot'
     Plug 'ryanoasis/vim-devicons'
+    Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
+    Plug 'rafi/awesome-vim-colorschemes'
+    Plug 'dylanaraps/wal.vim'
+    Plug 'shinchu/lightline-gruvbox.vim'
 call plug#end()

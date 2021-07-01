@@ -9,6 +9,9 @@ fi
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
 
+export PATH=~/bin:/home/david/.local/bin:$PATH
+export PATH
+
 HISTFILE=~/.histfile
 HISTSIZE=10000
 HISTFILE=10000
@@ -83,6 +86,10 @@ source ~/gitrepos/zsh-autosuggestions/zsh-autosuggestions.zsh
 #MUST BE THE LAST ONE
 source ./gitrepos/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source ~/powerlevel10k/powerlevel10k.zsh-theme
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh

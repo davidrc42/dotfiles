@@ -1,18 +1,29 @@
-colorscheme onedark
+colorscheme gruvbox
+
 "transparency
 hi Normal guibg=NONE ctermbg=NONE
 
 let g:javascript_plugin_jsdoc = 1
 
+
 "BAR
 let g:lightline = {
-      \ 'colorscheme': 'powerlineish',
+      \ 'colorscheme': 'gruvbox',
       \ }
 
 
 "PRETTIER
 let g:prettier#autoformat = 1
 let g:prettier#autoformat_require_pragma = 0
+
+"nerdtree syntax
+let g:NERDTreeFileExtensionHighlightFullName = 1
+let g:NERDTreeExactMatchHighlightFullName = 1
+let g:NERDTreePatternMatchHighlightFullName = 1
+
+"python jedi
+
+
 
 
 "CLOSE TAG

@@ -5,15 +5,15 @@ from libqtile.lazy import lazy
 from libqtile.utils import guess_terminal
 
 # CUSTOM VARIABLES
-gaps = 4
+gaps = 0
 border_width = 2
-color1 = "#015477"
+color1 = "#CC241D"
 #color1 = "#070D18"
-color2 = "#282A36"
-color3 = "#982123"
-color4 = "#1F242C" 
+color2 = "#272727"
+color3 = "#D79921"
+color4 = "#272727"
 color5 = "#2E3440"
-color6 = "#1C632E"
+color6 = "#679D6A"
 
 mod = "mod1"
 terminal = "alacritty"
@@ -125,8 +125,8 @@ for i in groups:
 # LAYOUTS
 layouts = [
     layout.Columns(
-        border_focus=color1,
-        border_normal=color3,
+        border_focus=color3,
+        border_normal=color2,
         margin=gaps,
         border_width=border_width,
         border_on_single=True,
@@ -158,24 +158,24 @@ screens = [
                 widget.WindowName(background=color4, padding=10),
                 widget.TextBox(
                          text = '⮂',
-                         foreground = color6,
+                         foreground = color3,
                          background=color4,
                          fontsize = 33
                 ),
                 widget.TextBox(
                          text = '🔉',
-                         background=color6,
+                         background=color3,
                          fontsize = 16,
                          font='monospace'
                 ),
                 widget.Volume(
-                    background=color6,
+                    background=color3,
 
                 ),
                 widget.TextBox(
                          text = '⮂',
-                         foreground = color3,
-                         background=color6,
+                         foreground = color6,
+                         background=color3,
                          fontsize = 33
                 ),
                 widget.TextBox(
@@ -183,19 +183,19 @@ screens = [
                     fontsize=12,
                     padding=0,
                     font='monospace',
-                    background=color3
+                    background=color6
                 ),
                 widget.Battery(
                     charge_char='',
                     discharge_char='',
                     empty_char='',
                     format='{percent:2.0%}',
-                    background=color3
+                    background=color6
                 ),
                 widget.TextBox(
                          text = '⮂',
                          foreground = color1,
-                         background=color3,
+                         background=color6,
                          fontsize = 33
                     ),
                 widget.TextBox(
@@ -259,4 +259,4 @@ focus_on_window_activation = "smart"
 #
 # We choose LG3D to maximize irony: it is a 3D non-reparenting WM written in
 # java that happens to be on java's whitelist.
-wmname = "LG3D"
+wmname = "qtile"

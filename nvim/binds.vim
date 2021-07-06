@@ -4,6 +4,8 @@ nnoremap tj  :tabnext<CR>
 nnoremap tk  :tabprev<CR>
 nnoremap f :Files<CR>
 nnoremap tn :tabe<CR>
+nnoremap j gj
+nnoremap k gk
 set pastetoggle=<F3>
 
 "EMMET

@@ -12,12 +12,16 @@ fi
 export PATH=~/bin:/home/david/.local/bin:$PATH
 export PATH
 
-HISTFILE=~/.histfile
+SAVEHIST=10000
+HISTFILE=~/.zsh_history
 HISTSIZE=10000
 HISTFILE=10000
+setopt appendhistory
+fc -W
+
+
+
 unsetopt beep
-
-
 autoload -U colors && colors
 
 function zle-keymap-select () {
@@ -33,12 +37,13 @@ PS1="%B%{$fg[red]%}[%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[blue]%}%M %{$fg[magent
 alias ls='exa -al --group-directories-first --icons'
 alias c='clear'
 alias v='nvim'
-alias matrix='cmatrix -C blue'
+alias matrix='cmatrix -C yellow'
 alias q='exit'
 alias p='sudo pacman'
 alias r='ranger'
 alias py='python3'
 alias black='/home/david/.local/bin/black'
+alias ping='ping -c 1'
 export EDITOR='nvim'
 
 mkdcd()
@@ -55,30 +60,8 @@ b(){
 #VIM
 bindkey -v
 
-# vi mode
-# bindkey -v
-# export KEYTIMEOUT=1
-#
-# Change cursor shape for different vi modes.
- function zle-keymap-select {
-   if [[ ${KEYMAP} == vicmd ]] ||
-        [[ $1 = 'block' ]]; then
-            echo -ne '\e[1 q'
-              elif [[ ${KEYMAP} == main ]] ||
-                     [[ ${KEYMAP} == viins ]] ||
-                            [[ ${KEYMAP} = '' ]] ||
-                                   [[ $1 = 'beam' ]]; then
-                                       echo -ne '\e[5 q'
-                                         fi
-                                         }
-                                         zle -N zle-keymap-select
-                                         zle-line-init() {
-                                             zle -K viins # initiate `vi insert` as keymap (can be removed if `bindkey -V` has been set elsewhere)
-                                                 echo -ne "\e[5 q"
-                                                 }
-                                                 zle -N zle-line-init
-                                                 echo -ne '\e[5 q' # Use beam shape cursor on startup.
-                                                 preexec() { echo -ne '\e[5 q' ;} # Use beam shape cursor for each new prompt.
+bindkey '^a' autosuggest-accept
+bindkey '^e' autosuggest-execute
 
 #PLUGINS
 #source ~/gitrepos/zsh-autocomplete/zsh-autocomplete.plugin.zsh
@@ -86,10 +69,6 @@ source ~/gitrepos/zsh-autosuggestions/zsh-autosuggestions.zsh
 #MUST BE THE LAST ONE
 source ./gitrepos/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source ~/powerlevel10k/powerlevel10k.zsh-theme
-
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh

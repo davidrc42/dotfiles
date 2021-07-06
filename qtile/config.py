@@ -7,6 +7,7 @@ from libqtile.utils import guess_terminal
 # CUSTOM VARIABLES
 gaps = 0
 border_width = 2
+
 color1 = "#CC241D"
 #color1 = "#070D18"
 color2 = "#272727"

@@ -8,8 +8,8 @@ let g:javascript_plugin_jsdoc = 1
 
 "BAR
 let g:lightline = {
-      \ 'colorscheme': 'gruvbox',
-      \ }
+     \ 'colorscheme': 'gruvbox',
+     \ }
 
 
 "PRETTIER
@@ -20,6 +20,9 @@ let g:prettier#autoformat_require_pragma = 0
 let g:NERDTreeFileExtensionHighlightFullName = 1
 let g:NERDTreeExactMatchHighlightFullName = 1
 let g:NERDTreePatternMatchHighlightFullName = 1
+
+"goto
+
 
 "python jedi
 

@@ -11,6 +11,7 @@ fi
 
 export PATH=~/bin:/home/david/.local/bin:$PATH
 export PATH
+export FZF_DEFAULT_COMMAND="find -L"
 
 SAVEHIST=10000
 HISTFILE=~/.zsh_history

@@ -33,4 +33,9 @@ call  plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'shinchu/lightline-gruvbox.vim'
     Plug 'gruvbox-community/gruvbox'
     Plug 'ntpeters/vim-better-whitespace'
+    Plug 'christoomey/vim-tmux-navigator'
+    Plug 'Xuyuanp/nerdtree-git-plugin'
+    Plug 'kien/ctrlp.vim'
+    Plug 'scrooloose/nerdcommenter'
+    Plug 'psf/black'
 call plug#end()

@@ -4,7 +4,7 @@ set guicursor=i:block
 set noerrorbells
 set tabstop=4
 set hidden
-set cursorline
+"set cursorline
 set softtabstop=4
 set shiftwidth=4
 set expandtab
@@ -18,10 +18,11 @@ set sidescrolloff=10
 set showtabline=0
 set laststatus=2
 set noshowmode
-syntax on 
+syntax on
 set nocompatible
 filetype off
 set nohlsearch
 set go+=a
 set clipboard=unnamedplus
 set confirm
+set signcolumn=no

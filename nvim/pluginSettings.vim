@@ -5,12 +5,16 @@ hi Normal guibg=NONE ctermbg=NONE
 
 let g:javascript_plugin_jsdoc = 1
 
+"CTRLP
+let g:ctrlp_show_hidden = 1
 
 "BAR
 let g:lightline = {
      \ 'colorscheme': 'gruvbox',
      \ }
 
+"commenter
+let g:NERDCommentEmptyLines = 1
 
 "PRETTIER
 let g:prettier#autoformat = 1
@@ -20,6 +24,9 @@ let g:prettier#autoformat_require_pragma = 0
 let g:NERDTreeFileExtensionHighlightFullName = 1
 let g:NERDTreeExactMatchHighlightFullName = 1
 let g:NERDTreePatternMatchHighlightFullName = 1
+
+"black
+autocmd BufWritePost *.py execute ':silent Black'
 
 "goto
 

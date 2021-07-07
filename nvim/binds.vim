@@ -12,6 +12,9 @@ set pastetoggle=<F3>
 let g:user_emmet_mode='i'
 let g:user_emmet_leader_key='<C-l>'
 
+"commenter
+nmap <C-_>   <Plug>NERDCommenterToggle
+vmap <C-_>   <Plug>NERDCommenterToggle<CR>gv
 
 "NERDTREE
 map <silent> <C-n> :NERDTreeFocus<CR>

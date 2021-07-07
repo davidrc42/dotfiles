@@ -1,3 +1,6 @@
+#XORG
+cp /home/david/.xinitrc /home/david/dotfiles/.xinitrc
+
 #QTILE
 mkdir -p /home/david/dotfiles/qtile
 cp /home/david/.config/qtile/config.py /home/david/dotfiles/qtile/config.py

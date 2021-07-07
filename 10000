@@ -1,0 +1,9 @@
+./scripts/pullConfigs
+sudo ./scripts/pullConfigs
+cd dotfiles
+gti add. 
+git add .
+git comit -m "made rice more minimal"
+git commit -m 
+git commit -m "made rice more minimal"
+git push origin master

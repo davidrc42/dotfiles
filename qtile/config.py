@@ -9,7 +9,7 @@ gaps = 0
 border_width = 2
 
 color1 = "#CC241D"
-#color1 = "#070D18"
+# color1 = "#070D18"
 color2 = "#272727"
 color3 = "#D79921"
 color4 = "#272727"
@@ -131,7 +131,7 @@ layouts = [
         margin=gaps,
         border_width=border_width,
         border_on_single=True,
-        grow_amount=2
+        grow_amount=2,
     ),
     layout.Max(),
     # layout.Stack(num_stacks=2),
@@ -146,7 +146,9 @@ layouts = [
     # layout.Zoomy(),
 ]
 
-widget_defaults = dict(font="monospace bold", fontsize=14, padding=2, background=color4)
+widget_defaults = dict(
+    font="monospace bold", fontsize=14, padding=3, background=color4
+)
 extension_defaults = widget_defaults.copy()
 
 screens = [
@@ -154,65 +156,42 @@ screens = [
         top=bar.Bar(
             [
                 widget.GroupBox(),
-
                 widget.Prompt(),
                 widget.WindowName(background=color4, padding=10),
                 widget.TextBox(
-                         text = '⮂',
-                         foreground = color3,
-                         background=color4,
-                         fontsize = 33
+                    text="⮂", foreground=color3, background=color4, fontsize=33
                 ),
                 widget.TextBox(
-                         text = '🔉',
-                         background=color3,
-                         fontsize = 16,
-                         font='monospace'
+                    text="🔉", background=color3, fontsize=16, font="monospace"
                 ),
                 widget.Volume(
                     background=color3,
-
                 ),
                 widget.TextBox(
-                         text = '⮂',
-                         foreground = color6,
-                         background=color3,
-                         fontsize = 33
+                    text="⮂", foreground=color6, background=color3, fontsize=33
                 ),
                 widget.TextBox(
-                    "🔌",
-                    fontsize=12,
-                    padding=0,
-                    font='monospace',
-                    background=color6
+                    "🔌", fontsize=12, padding=0, font="monospace", background=color6
                 ),
                 widget.Battery(
-                    charge_char='',
-                    discharge_char='',
-                    empty_char='',
-                    format='{percent:2.0%}',
-                    background=color6
+                    charge_char="",
+                    discharge_char="",
+                    empty_char="",
+                    format="{percent:2.0%}",
+                    background=color6,
                 ),
                 widget.TextBox(
-                         text = '⮂',
-                         foreground = color1,
-                         background=color6,
-                         fontsize = 33
-                    ),
+                    text="⮂", foreground=color1, background=color6, fontsize=33
+                ),
                 widget.TextBox(
-                    "📆",
-                    font='monospace',
-                    fontsize=12,
-                    padding=0,
-                    background=color1
+                    "📆", font="monospace", fontsize=12, padding=0, background=color1
                 ),
                 widget.Clock(format="%Y-%m-%d %H:%M", background=color1),
             ],
             24,
         ),
     ),
-    Screen(
-    ),
+    Screen(),
 ]
 
 # Drag floating layouts.

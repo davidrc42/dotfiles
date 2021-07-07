@@ -25,7 +25,9 @@ fileManager = "thunar"
 
 
 keys = [
+    # Switch monitors
     # Switch between windows
+    Key([mod], "period", lazy.next_screen(), desc="Next monitor"),
     Key([mod], "h", lazy.layout.left(), desc="Move focus to left"),
     Key([mod], "l", lazy.layout.right(), desc="Move focus to right"),
     Key([mod], "j", lazy.layout.down(), desc="Move focus down"),
@@ -146,9 +148,7 @@ layouts = [
     # layout.Zoomy(),
 ]
 
-widget_defaults = dict(
-    font="monospace bold", fontsize=14, padding=3, background=color4
-)
+widget_defaults = dict(font="monospace bold", fontsize=14, padding=3, background=color4)
 extension_defaults = widget_defaults.copy()
 
 screens = [

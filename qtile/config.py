@@ -9,12 +9,12 @@ gaps = 0
 border_width = 2
 
 color1 = "#CC241D"
-# color1 = "#070D18"
 color2 = "#272727"
 color3 = "#D79921"
 color4 = "#272727"
 color5 = "#2E3440"
 color6 = "#679D6A"
+color7 = "#44818C"
 
 mod = "mod1"
 terminal = "alacritty"
@@ -129,7 +129,7 @@ for i in groups:
 layouts = [
     layout.Columns(
         border_focus=color3,
-        border_normal=color2,
+        border_normal=color1,
         margin=gaps,
         border_width=border_width,
         border_on_single=True,
@@ -148,14 +148,16 @@ layouts = [
     # layout.Zoomy(),
 ]
 
-widget_defaults = dict(font="monospace bold", fontsize=14, padding=3, background=color4)
+widget_defaults = dict(
+    font="Hack Nerd Font Bold", fontsize=14, padding=2, background=color4
+)
 extension_defaults = widget_defaults.copy()
 
 screens = [
     Screen(
         top=bar.Bar(
             [
-                widget.GroupBox(),
+                widget.GroupBox(hide_unused=True),
                 widget.Prompt(),
                 widget.WindowName(background=color4, padding=10),
                 widget.TextBox(

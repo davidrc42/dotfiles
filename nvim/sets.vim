@@ -26,3 +26,4 @@ set go+=a
 set clipboard=unnamedplus
 set confirm
 set signcolumn=no
+set wrap

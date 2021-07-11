@@ -7,3 +7,17 @@ git comit -m "made rice more minimal"
 git commit -m 
 git commit -m "made rice more minimal"
 git push origin master
+neofetch
+sudo ./scripts/pullConfigs
+cd dotfiles
+git add .
+git commit -m "added monitor swap"
+git push origin main
+cd dotfiles
+cd dotfiles
+ls
+clera
+clear
+v dotfiles
+cd dotfiles
+p10k configure

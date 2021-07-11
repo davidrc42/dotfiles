@@ -2,7 +2,6 @@ call  plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'junegunn/goyo.vim'
     Plug 'farmergreg/vim-lastplace'
     Plug 'dracula/vim', { 'as': 'dracula' }
-   " Plug 'morhetz/gruvbox'
     Plug 'mattn/emmet-vim'
     Plug 'jelera/vim-javascript-syntax'
     Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
@@ -13,8 +12,6 @@ call  plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
     Plug 'junegunn/fzf.vim'
     Plug 'itchyny/lightline.vim'
-"    Plug 'vim-airline/vim-airline'
-"    Plug 'vim-airline/vim-airline-themes'
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
     Plug 'tpope/vim-surround'
     Plug 'tpope/vim-fugitive'
@@ -38,4 +35,6 @@ call  plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'kien/ctrlp.vim'
     Plug 'scrooloose/nerdcommenter'
     Plug 'psf/black'
+    Plug 'altercation/vim-colors-solarized'
+    Plug 'ayu-theme/ayu-vim'
 call plug#end()

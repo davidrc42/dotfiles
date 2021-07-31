@@ -1,24 +1,28 @@
-colorscheme gruvbox
+colorscheme plain
 
-"transparency
+
 hi Normal guibg=NONE ctermbg=NONE
 
+"gitsigns
+
 let g:javascript_plugin_jsdoc = 1
+
 
 "CTRLP
 let g:ctrlp_show_hidden = 1
 
 "BAR
 let g:lightline = {
-     \ 'colorscheme': 'gruvbox',
+     \ 'colorscheme': 'wombat',
      \ }
 
 "commenter
-let g:NERDCommentEmptyLines = 1
 
 "PRETTIER
-let g:prettier#autoformat = 1
-let g:prettier#autoformat_require_pragma = 0
+"let g:prettier#autoformat = 1
+"autocmd BufWritePost *.js,*.json execute ':silent Prettier'
+"autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue PrettierAsync
+"let g:prettier#autoformat_require_pragma = 0
 
 "nerdtree syntax
 let g:NERDTreeFileExtensionHighlightFullName = 1

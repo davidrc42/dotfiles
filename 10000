@@ -21,3 +21,18 @@ clear
 v dotfiles
 cd dotfiles
 p10k configure
+b 2000
+p -R gvim
+cd code/snakeGamePython
+v toDo.txt
+v src/main.py
+cd ../..
+sudo ./scripts/pullConfigs
+cd dotfiles
+git add .
+git commit -m "minor touches"
+git add .
+sudo git add .
+git commit -m "minor touches"
+git push origin master
+git push origin main

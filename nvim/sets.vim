@@ -20,10 +20,12 @@ set laststatus=2
 set noshowmode
 syntax on
 set nocompatible
-filetype off
+filetype plugin on
 set nohlsearch
 set go+=a
 set clipboard=unnamedplus
 set confirm
 set signcolumn=no
 set wrap
+set nomodeline
+set makeprg

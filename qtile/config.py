@@ -5,21 +5,21 @@ from libqtile.lazy import lazy
 from libqtile.utils import guess_terminal
 
 # CUSTOM VARIABLES
-gaps = 0
+gaps = 6
 border_width = 2
 
-color1 = "#CC241D"
+color1 = "#0A0A0A"
 color2 = "#272727"
-color3 = "#D79921"
-color4 = "#272727"
+color3 = "#363636"
+border_focus_color = "D3D3D3"
+color4 = "#0A0A0A"
 color5 = "#2E3440"
-color6 = "#679D6A"
+color6 = "#212121"
 color7 = "#44818C"
 
 mod = "mod1"
 terminal = "alacritty"
 browser = "brave"
-vscode = "code"
 gimp = "gimp"
 fileManager = "thunar"
 
@@ -68,9 +68,29 @@ keys = [
     Key([mod], "Return", lazy.spawn(terminal), desc="Launch terminal"),
     Key([mod], "t", lazy.spawn(fileManager), desc="Launch file manager"),
     Key([mod], "w", lazy.spawn(browser), desc="Launch browser"),
-    Key([mod], "c", lazy.spawn(vscode), desc="Launch visual studio code"),
     Key([mod], "d", lazy.spawn("rofi -show run"), desc="Launch rofi"),
     Key([mod], "g", lazy.spawn("gimp"), desc="Launch gimp"),
+    Key([mod], "a", lazy.spawn("anki"), desc="Launch anki"),
+    Key(
+        [mod],
+        "y",
+        lazy.spawn(
+            "zathura /home/david/documents/pregatireBac/matematica/varianteBacMatematica(temaVacanta).pdf"
+        ),
+        desc="Launch anki",
+    ),
+    Key(
+        [mod],
+        "p",
+        lazy.spawn("/home/david/code/simple-time-tool/main.py"),
+        desc="launch STT",
+    ),
+    Key(
+        [mod, "shift"],
+        "p",
+        lazy.spawn("alacritty -e nvim /home/david/code/simple-time-tool/config.py"),
+        desc="open STT config",
+    ),
     Key(
         [mod],
         "n",
@@ -128,7 +148,7 @@ for i in groups:
 # LAYOUTS
 layouts = [
     layout.Columns(
-        border_focus=color3,
+        border_focus=border_focus_color,
         border_normal=color1,
         margin=gaps,
         border_width=border_width,
@@ -193,7 +213,45 @@ screens = [
             24,
         ),
     ),
-    Screen(),
+    Screen(
+        top=bar.Bar(
+            [
+                widget.GroupBox(hide_unused=True),
+                widget.Prompt(),
+                widget.WindowName(background=color4, padding=10),
+                widget.TextBox(
+                    text="⮂", foreground=color3, background=color4, fontsize=33
+                ),
+                widget.TextBox(
+                    text="🔉", background=color3, fontsize=16, font="monospace"
+                ),
+                widget.Volume(
+                    background=color3,
+                ),
+                widget.TextBox(
+                    text="⮂", foreground=color6, background=color3, fontsize=33
+                ),
+                widget.TextBox(
+                    "🔌", fontsize=12, padding=0, font="monospace", background=color6
+                ),
+                widget.Battery(
+                    charge_char="",
+                    discharge_char="",
+                    empty_char="",
+                    format="{percent:2.0%}",
+                    background=color6,
+                ),
+                widget.TextBox(
+                    text="⮂", foreground=color1, background=color6, fontsize=33
+                ),
+                widget.TextBox(
+                    "📆", font="monospace", fontsize=12, padding=0, background=color1
+                ),
+                widget.Clock(format="%Y-%m-%d %H:%M", background=color1),
+            ],
+            24,
+        ),
+    ),
 ]
 
 # Drag floating layouts.

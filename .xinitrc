@@ -49,8 +49,8 @@ if [ -d /etc/X11/xinit/xinitrc.d ] ; then
 fi
 
 exec xset r rate 280 40 &
+exec picom &
 #exec picom --experimental-backends &
-exec feh --bg-scale pictures/wallpapers/gruv.png &
-#exec picom --experimental-backends &
+exec feh --bg-scale pictures/wallpapers/ocean.jpg &
 xrandr --output VGA-1 --left-of LVDS-1
-exec qtile
+exec qtile start

@@ -22,7 +22,8 @@ cp /home/david/.config/neofetch/config.conf /home/david/dotfiles/neofetch/config
 #cp /home/david/.config/polybar/config /home/david/dotfiles/polybar/config
 
 #PICOM(not using anymore)
-#cp /home/david/.config/picom.conf /home/david/dotfiles/picom.conf
+mkdir -p /home/david/dotfiles/picom
+cp /home/david/.config/picom/picom.conf /home/david/dotfiles/picom/picom.conf
 
 #ALACRITTY
 mkdir -p /home/david/dotfiles/alacritty

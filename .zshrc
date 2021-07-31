@@ -9,6 +9,8 @@ fi
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
 
+export EDITOR=nvim
+export VISUAL=nvim
 export PATH=~/bin:/home/david/.local/bin:$PATH
 export PATH
 export FZF_DEFAULT_COMMAND="find -L"
@@ -45,6 +47,8 @@ alias r='ranger'
 alias py='python3'
 alias black='/home/david/.local/bin/black'
 alias ping='ping -c 1'
+alias wikitro='wikit --lang ro'
+alias monitorb='xrandr --output VGA-1 --brightness'
 export EDITOR='nvim'
 
 mkdcd()
@@ -73,3 +77,8 @@ source ~/powerlevel10k/powerlevel10k.zsh-theme
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+# Lines configured by zsh-newuser-install
+HISTFILE=~/.histfile
+HISTSIZE=10000
+SAVEHIST=1000
+# End of lines configured by zsh-newuser-install

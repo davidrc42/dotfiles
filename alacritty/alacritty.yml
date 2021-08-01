@@ -27,12 +27,12 @@ colors:
     white: "#99ac9e"
 window:
   padding:
-    x: 5
-    y: 5
+    x: 20
+    y: 20
 font:
   normal:
     family: Hack Nerd Font
-  size: 10
+  size: 9
 background_opacity: 0.8
 key_bindings:
   - key: Equals

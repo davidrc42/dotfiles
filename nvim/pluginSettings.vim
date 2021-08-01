@@ -1,5 +1,7 @@
-colorscheme plain
+ colorscheme plain
 
+
+packloadall
 
 hi Normal guibg=NONE ctermbg=NONE
 

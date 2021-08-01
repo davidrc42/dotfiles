@@ -5,7 +5,7 @@ from libqtile.lazy import lazy
 from libqtile.utils import guess_terminal
 
 # CUSTOM VARIABLES
-gaps = 6
+gaps = 10
 border_width = 2
 
 color1 = "#0A0A0A"
@@ -75,7 +75,7 @@ keys = [
         [mod],
         "y",
         lazy.spawn(
-            "zathura /home/david/documents/pregatireBac/matematica/varianteBacMatematica(temaVacanta).pdf"
+            "zathura /home/david/documents/pregatireBac/matematica/matematicaManual11.pdf"
         ),
         desc="Launch anki",
     ),
@@ -149,7 +149,7 @@ for i in groups:
 layouts = [
     layout.Columns(
         border_focus=border_focus_color,
-        border_normal=color1,
+        border_normal=color3,
         margin=gaps,
         border_width=border_width,
         border_on_single=True,
@@ -177,7 +177,11 @@ screens = [
     Screen(
         top=bar.Bar(
             [
-                widget.GroupBox(hide_unused=True),
+                widget.GroupBox(
+                    hide_unused=False,
+                    highlight_method="line",
+                    highlight_color=[color1, color1],
+                ),
                 widget.Prompt(),
                 widget.WindowName(background=color4, padding=10),
                 widget.TextBox(

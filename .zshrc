@@ -67,6 +67,8 @@ bindkey -v
 
 bindkey '^a' autosuggest-accept
 bindkey '^e' autosuggest-execute
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#D3D3D3"
+
 
 #PLUGINS
 #source ~/gitrepos/zsh-autocomplete/zsh-autocomplete.plugin.zsh

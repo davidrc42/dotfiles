@@ -25,6 +25,10 @@ cp /home/david/.config/neofetch/config.conf /home/david/dotfiles/neofetch/config
 mkdir -p /home/david/dotfiles/picom
 cp /home/david/.config/picom/picom.conf /home/david/dotfiles/picom/picom.conf
 
+#ZATHURA
+mkdir -p /home/david/dorfile/zathura
+cp /home/david/.config/zathura/zathurarc /home/david/dotfiles/picom/picom.conf
+
 #ALACRITTY
 mkdir -p /home/david/dotfiles/alacritty
 cp /home/david/.config/alacritty/alacritty.yml /home/david/dotfiles/alacritty/alacritty.yml

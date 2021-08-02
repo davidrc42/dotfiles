@@ -5,7 +5,7 @@ from libqtile.lazy import lazy
 from libqtile.utils import guess_terminal
 
 # CUSTOM VARIABLES
-gaps = 10
+gaps = 5
 border_width = 2
 
 color1 = "#0A0A0A"

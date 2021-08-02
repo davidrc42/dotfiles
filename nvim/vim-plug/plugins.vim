@@ -45,7 +45,7 @@ call  plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
     Plug 'rafi/awesome-vim-colorschemes'
     Plug 'dylanaraps/wal.vim'
-    Plug 'shinchu/lightline-gruvbox.vim'
+    " Plug 'shinchu/lightline-gruvbox.vim'
     Plug 'gruvbox-community/gruvbox'
     Plug 'ntpeters/vim-better-whitespace'
     Plug 'christoomey/vim-tmux-navigator'

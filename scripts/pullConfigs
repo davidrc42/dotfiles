@@ -27,7 +27,7 @@ cp /home/david/.config/picom/picom.conf /home/david/dotfiles/picom/picom.conf
 
 #ZATHURA
 mkdir -p /home/david/dotfiles/zathura
-cp /home/david/.config/zathura/zathurarc /home/david/dotfiles/picom/picom.conf
+cp /home/david/.config/zathura/zathurarc /home/david/dotfiles/zathura/zathurarc
 
 #ALACRITTY
 mkdir -p /home/david/dotfiles/alacritty

@@ -51,6 +51,18 @@ alias wikitro='wikit --lang ro'
 alias monitorb='xrandr --output VGA-1 --brightness'
 export EDITOR='nvim'
 
+zathura()
+{
+    setsid zathura "$1" &&
+        exit
+}
+
+zaread()
+{
+    setsid zaread "$1" &&
+        exit
+}
+
 mkdcd()
 {
     mkdir -p -- "$1" &&

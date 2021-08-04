@@ -32,7 +32,7 @@ window:
 font:
   normal:
     family: Hack Nerd Font
-  size: 9
+  size: 8
 background_opacity: 0.8
 key_bindings:
   - key: Equals

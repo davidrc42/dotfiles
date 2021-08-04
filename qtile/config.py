@@ -9,6 +9,7 @@ gaps = 5
 border_width = 2
 
 color1 = "#0A0A0A"
+arrowSize = 43
 color2 = "#272727"
 color3 = "#363636"
 border_focus_color = "D3D3D3"
@@ -71,12 +72,11 @@ keys = [
     Key([mod], "d", lazy.spawn("rofi -show run"), desc="Launch rofi"),
     Key([mod], "g", lazy.spawn("gimp"), desc="Launch gimp"),
     Key([mod], "a", lazy.spawn("anki"), desc="Launch anki"),
+    Key([mod], "f", lazy.spawn("flameshot launcher"), desc="screenshot"),
     Key(
         [mod],
         "y",
-        lazy.spawn(
-            "zathura /home/david/documents/pregatireBac/matematica/matematicaManual11.pdf"
-        ),
+        lazy.spawn("zaread /home/david/documents/pregatireBac/eseuri/plumb.docx"),
         desc="Launch anki",
     ),
     Key(
@@ -96,6 +96,12 @@ keys = [
         "n",
         lazy.spawn("amixer -D pulse sset Master 5%-"),
         desc="increase volume",
+    ),
+    Key(
+        [mod],
+        "z",
+        lazy.spawn("zathura /home/david/documents/pregatireBac/matematica/matematicaManual11.pdf"),
+        desc="launch zathura",
     ),
     Key(
         [mod],
@@ -168,9 +174,7 @@ layouts = [
     # layout.Zoomy(),
 ]
 
-widget_defaults = dict(
-    font="Hack Nerd Font Bold", fontsize=14, padding=2, background=color4
-)
+widget_defaults = dict(font="Hack Nerd Font", fontsize=14, padding=2, background=color4)
 extension_defaults = widget_defaults.copy()
 
 screens = [
@@ -185,7 +189,7 @@ screens = [
                 widget.Prompt(),
                 widget.WindowName(background=color4, padding=10),
                 widget.TextBox(
-                    text="⮂", foreground=color3, background=color4, fontsize=33
+                    text="⮂", foreground=color3, background=color4, fontsize=arrowSize
                 ),
                 widget.TextBox(
                     text="🔉", background=color3, fontsize=16, font="monospace"
@@ -194,7 +198,7 @@ screens = [
                     background=color3,
                 ),
                 widget.TextBox(
-                    text="⮂", foreground=color6, background=color3, fontsize=33
+                    text="⮂", foreground=color6, background=color3, fontsize=arrowSize
                 ),
                 widget.TextBox(
                     "🔌", fontsize=12, padding=0, font="monospace", background=color6
@@ -207,7 +211,7 @@ screens = [
                     background=color6,
                 ),
                 widget.TextBox(
-                    text="⮂", foreground=color1, background=color6, fontsize=33
+                    text="⮂", foreground=color1, background=color6, fontsize=arrowSize
                 ),
                 widget.TextBox(
                     "📆", font="monospace", fontsize=12, padding=0, background=color1

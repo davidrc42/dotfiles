@@ -2,6 +2,7 @@ set statusbar-h-padding 0
 set statusbar-v-padding 0
 set recolor
 set page-padding 10
+set scroll-step 40
 map K zoom in
 map J zoom out
 map i recolor

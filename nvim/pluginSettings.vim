@@ -1,4 +1,5 @@
- colorscheme plain
+ colorscheme nord
+ hi Visual term=reverse cterm=reverse guibg=Black
 
 
 packloadall

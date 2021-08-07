@@ -29,3 +29,7 @@ set signcolumn=no
 set wrap
 set nomodeline
 set makeprg
+au! BufEnter *.c syn match specialComment #//.*#  " C files (*.c)
+au! BufEnter *.js syn match specialComment #//.*#  " js files (*.js)
+au! BufEnter *.py syn match specialComment /#.*/  " Python files (*.py)
+hi specialComment ctermfg=red guifg=red

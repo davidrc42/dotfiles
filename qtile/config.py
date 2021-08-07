@@ -8,6 +8,7 @@ from libqtile.utils import guess_terminal
 gaps = 5
 border_width = 2
 
+color0 = "#000000"
 color1 = "#0A0A0A"
 arrowSize = 43
 color2 = "#272727"
@@ -72,6 +73,12 @@ keys = [
     Key([mod], "d", lazy.spawn("rofi -show run"), desc="Launch rofi"),
     Key([mod], "g", lazy.spawn("gimp"), desc="Launch gimp"),
     Key([mod], "a", lazy.spawn("anki"), desc="Launch anki"),
+    Key(
+        [mod, "shift"],
+        "d",
+        lazy.spawn("alacritty -e nvim /home/david/distractions "),
+        desc="open distractions",
+    ),
     Key([mod], "f", lazy.spawn("flameshot launcher"), desc="screenshot"),
     Key(
         [mod],
@@ -100,7 +107,9 @@ keys = [
     Key(
         [mod],
         "z",
-        lazy.spawn("zathura /home/david/documents/pregatireBac/matematica/matematicaManual11.pdf"),
+        lazy.spawn(
+            "zathura /home/david/documents/pregatireBac/matematica/matematicaManual11.pdf"
+        ),
         desc="launch zathura",
     ),
     Key(
@@ -174,7 +183,7 @@ layouts = [
     # layout.Zoomy(),
 ]
 
-widget_defaults = dict(font="Hack Nerd Font", fontsize=14, padding=2, background=color4)
+widget_defaults = dict(font="Hack Nerd Font", fontsize=14, padding=2, background=color0)
 extension_defaults = widget_defaults.copy()
 
 screens = [
@@ -187,9 +196,9 @@ screens = [
                     highlight_color=[color1, color1],
                 ),
                 widget.Prompt(),
-                widget.WindowName(background=color4, padding=10),
+                widget.WindowName(background=color0, padding=10),
                 widget.TextBox(
-                    text="⮂", foreground=color3, background=color4, fontsize=arrowSize
+                    text="⮂", foreground=color3, background=color0, fontsize=arrowSize
                 ),
                 widget.TextBox(
                     text="🔉", background=color3, fontsize=16, font="monospace"

@@ -89,6 +89,7 @@ keys = [
     Key(
         [mod],
         "p",
+        lazy.spawn('alacritty -e mpv --no-video "https://www.youtube.com/watch?v=5qap5aO4i9A"'),
         lazy.spawn("/home/david/code/simple-time-tool/main.py"),
         desc="launch STT",
     ),

@@ -50,7 +50,7 @@ fi
 
 exec xset r rate 280 40 &
 exec picom &
-#exec picom --experimental-backends &
 exec feh --bg-scale pictures/wallpapers/ocean.jpg &
 xrandr --output VGA-1 --left-of LVDS-1
+# exec gnome-session
 exec qtile start

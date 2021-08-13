@@ -21,7 +21,7 @@ color7 = "#44818C"
 
 mod = "mod1"
 terminal = "alacritty"
-browser = "brave"
+browser = "qutebrowser"
 gimp = "gimp"
 fileManager = "thunar"
 

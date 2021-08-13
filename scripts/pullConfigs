@@ -51,3 +51,7 @@ cp /home/david/.zshrc /home/david/dotfiles/.zshrc
 mkdir -p /home/david/dotfiles/scripts
 cp -R /home/david/scripts/. /home/david/dotfiles/scripts
 
+#QUTEBROWSER
+mkdir -p /home/david/dotfiles/qutebrowser
+cp /home/david/.config/qutebrowser/config.py /home/david/dotfiles/qutebrowser/config.py
+

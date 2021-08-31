@@ -9,8 +9,8 @@ fi
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
 
-export EDITOR=nvim
-export VISUAL=nvim
+export EDITOR='nvim'
+export VISUAL='nvim'
 export PATH=~/bin:/home/david/.local/bin:$PATH
 export PATH
 export FZF_DEFAULT_COMMAND="find -L"
@@ -38,6 +38,7 @@ PS1="%B%{$fg[red]%}[%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[blue]%}%M %{$fg[magent
 
 #ALIASES
 alias ls='exa -al --group-directories-first --icons'
+alias dexonline='~/code/dexonlineCLI/main.py'
 alias c='clear'
 alias v='nvim'
 alias matrix='cmatrix -C yellow'

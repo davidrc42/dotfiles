@@ -1,4 +1,5 @@
 call  plug#begin('~/.config/nvim/autoload/plugged')
+    Plug 'philj56/vim-asm-indent'
     Plug 'junegunn/goyo.vim'
     Plug 'farmergreg/vim-lastplace'
     Plug 'tpope/vim-commentary'
@@ -7,7 +8,7 @@ call  plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'jelera/vim-javascript-syntax'
     Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
     Plug 'joshdick/onedark.vim'
-    " Plug 'codota/tabnine-vim'
+    Plug 'rhysd/vim-clang-format'
     Plug 'dylanaraps/wal.vim'
     Plug 'lilydjwg/colorizer'
     Plug 'arcticicestudio/nord-vim'
@@ -38,14 +39,14 @@ call  plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'yuezk/vim-js'
     Plug 'honza/vim-snippets'
     Plug 'alvan/vim-closetag'
-    " Plug 'turbio/bracey.vim', {'do': 'npm install --prefix server'}
+    Plug 'turbio/bracey.vim', {'do': 'npm install --prefix server'}
+    Plug 'dikiaap/minimalist'
     Plug 'pangloss/vim-javascript'
     Plug 'sheerun/vim-polyglot'
     Plug 'ryanoasis/vim-devicons'
     Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
     Plug 'rafi/awesome-vim-colorschemes'
     Plug 'dylanaraps/wal.vim'
-    " Plug 'shinchu/lightline-gruvbox.vim'
     Plug 'gruvbox-community/gruvbox'
     Plug 'ntpeters/vim-better-whitespace'
     Plug 'christoomey/vim-tmux-navigator'

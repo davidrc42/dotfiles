@@ -1,4 +1,4 @@
- colorscheme nord
+colorscheme nord
  hi Visual term=reverse cterm=reverse guibg=Black
 
 
@@ -34,6 +34,7 @@ let g:NERDTreePatternMatchHighlightFullName = 1
 
 "black
 autocmd BufWritePost *.py execute ':silent Black'
+autocmd BufWritePost *.c execute ':silent ClangFormat'
 
 "goto
 

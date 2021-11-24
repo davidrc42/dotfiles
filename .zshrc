@@ -25,6 +25,28 @@ fc -W
 
 
 unsetopt beep
+export EDITOR='nvim'
+export VISUAL='nvim'
+export PATH=~/bin:/home/david/.local/bin:$PATH
+export PATH
+export FZF_DEFAULT_COMMAND="find -L"
+
+SAVEHIST=10000
+HISTFILE=~/.zsh_history
+HISTSIZE=10000
+HISTFILE=10000
+setopt appendhistory
+fc -W
+
+NPM_PACKAGES="~/.npm_packages"
+
+export PATH="$PATH:$NPM_PACKAGES/bin"
+
+# Preserve MANPATH if you already defined it somewhere in your config.
+# Otherwise, fall back to `manpath` so we can inherit from `/etc/manpath`.
+export MANPATH="${MANPATH-$(manpath)}:$NPM_PACKAGES/share/man"
+
+unsetopt beep
 autoload -U colors && colors
 
 function zle-keymap-select () {
@@ -33,24 +55,46 @@ function zle-keymap-select () {
         viins|main) echo -ne '\e[5 q';; # beam
     esac
                         3}
-PS1="%B%{$fg[red]%}[%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[blue]%}%M %{$fg[magenta]%}%~%{$fg[red]%}]%{$reset_color%}$%b "
+PS1="%B%{$fg[blue]%}[%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[blue]%}%M %{$fg[magenta]%}%~%{$fg[blue]%}]%{$reset_color%}$%b "
+
+# autocomplete
+autoload -U compinit
+zstyle ':completion:*' menu select
+zmodload zsh/complist
+compinit
+_comp_options+=(globdots)		# Include hidden files.
+
+# vim maps for menu select
+bindkey -M menuselect 'h' vi-backward-char
+bindkey -M menuselect 'k' vi-up-line-or-history
+bindkey -M menuselect 'l' vi-forward-char
+bindkey -M menuselect 'j' vi-down-line-or-history
+bindkey -v '^?' backward-delete-char
+export KEYTIMEOUT=1
+
+# cursor in vim mode
 
 
 #ALIASES
-alias ls='exa -al --group-directories-first --icons'
-alias dexonline='~/code/dexonlineCLI/main.py'
+alias rb='doas reboot'
+alias m='mkdir'
+alias ani-cli='ani-cli -q best'
+alias sd='doas poweroff'
+alias nf='neofetch'
+# alias ls='exa -al --group-directories-first --icons'
+alias dex='~/code/dexonlineCLI/main.py'
 alias c='clear'
 alias v='nvim'
 alias matrix='cmatrix -C yellow'
 alias q='exit'
-alias p='sudo pacman'
+alias p='doas pacman'
 alias r='ranger'
 alias py='python3'
 alias black='/home/david/.local/bin/black'
 alias ping='ping -c 1'
 alias wikitro='wikit --lang ro'
 alias monitorb='xrandr --output VGA-1 --brightness'
-export EDITOR='nvim'
+alias cdl='cdls'
 
 zathura()
 {
@@ -70,6 +114,18 @@ mkdcd()
       cd -P -- "$1"
 }
 
+cdls()
+{
+    cd "$1" &&
+        ls
+}
+
+stt()
+{
+    setsid ~/simple-time-tool/main.py &&
+        exit
+}
+
 #range: 1-4437
 b(){
     echo "$1" > /sys/class/backlight/intel_backlight/brightness
@@ -84,16 +140,12 @@ ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#D3D3D3"
 
 
 #PLUGINS
-#source ~/gitrepos/zsh-autocomplete/zsh-autocomplete.plugin.zsh
 source ~/gitrepos/zsh-autosuggestions/zsh-autosuggestions.zsh
 #MUST BE THE LAST ONE
-source ./gitrepos/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source ~/powerlevel10k/powerlevel10k.zsh-theme
-
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-# Lines configured by zsh-newuser-install
+source ~/gitrepos/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 HISTFILE=~/.histfile
 HISTSIZE=10000
 SAVEHIST=1000
-# End of lines configured by zsh-newuser-install
+
+alias luamake=/home/david/lua-language-server/3rd/luamake/luamake
+fpath=($fpath "/home/david/.zfunctions")
